@@ -1,15 +1,16 @@
 ## instalar ssh en windows y comandos basicos Para instalar OpenSSH mediante PowerShell, ejecute PowerShell como administrador. 
-Para asegurarse de que OpenSSH esté disponible, ejecute el siguiente cmdlet:
+# Para asegurarse de que OpenSSH esté disponible, ejecute el siguiente cmdlet:
 Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
 
-## A continuación, instale los componentes de servidor o cliente según sea necesario:
+# A continuación, instale los componentes de servidor o cliente según sea necesario:
 
 # Install the OpenSSH Client
 Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
+
 # Install the OpenSSH Server
 Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 
-##Para iniciar y configurar el servidor OpenSSH para su primer uso, abra PowerShell como administrador y,
+# Para iniciar y configurar el servidor OpenSSH para su primer uso, abra PowerShell como administrador y,
 luego, ejecute los siguientes comandos para iniciar sshd 
 # Start the sshd service
 Start-Service sshd
