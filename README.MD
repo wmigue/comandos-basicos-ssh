@@ -1,9 +1,9 @@
-##instalar ssh en windows y comandos basicos
-Para instalar OpenSSH mediante PowerShell, ejecute PowerShell como administrador. 
+## instalar ssh en windows y comandos basicos Para instalar OpenSSH mediante PowerShell, ejecute PowerShell como administrador. 
 Para asegurarse de que OpenSSH esté disponible, ejecute el siguiente cmdlet:
 Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
 
-##A continuación, instale los componentes de servidor o cliente según sea necesario:
+## A continuación, instale los componentes de servidor o cliente según sea necesario:
+
 # Install the OpenSSH Client
 Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
 # Install the OpenSSH Server
@@ -16,44 +16,44 @@ Start-Service sshd
 # OPTIONAL but recommended:
 Set-Service -Name sshd -StartupType 'Automatic'
 
-#conectarse a una maquina por ssh (maquina@ip)
+# conectarse a una maquina por ssh (maquina@ip)
 ssh vmwmigue@192.168.0.114
 
-#copiar todo el directorio y subcarpetas desde el servidor a nuestra 
+# copiar todo el directorio y subcarpetas desde el servidor a nuestra 
 maquina en el directorio que estamos parado en nuestra maquina cliente.
 scp -r username@hostname:/path/from/remote .
 scp -r vmwmigue@192.168.0.114:C:\Users\vmWmigue\hola .
 
-#copiar carpeta y contenido desde el cliente al servidor
+# copiar carpeta y contenido desde el cliente al servidor
 scp -r /path/from/local username@hostname:/path/to/remote
 
 ## comandos basicos consola powershell windows
 
-#abrir powershell de windows
+# abrir powershell de windows
 powershell
 
-#crear directorio
+# crear directorio
 mkdir nombre
 
-#listar carpetas
+# listar carpetas
 dir
 
-#cambiar de directorios
+# cambiar de directorios
 cd.. 
 cd /carpeta
 
 
-#muestra todos los subdirectorios
+# muestra todos los subdirectorios
 TREE Carpeta
 
 
-#limpiar pantalla
+# limpiar pantalla
 CLS
 
-#copiar archivos
+# copiar archivos
 COPY Archivo Destino
 
-#mover archivos
+# mover archivos
 MOVE Archivo Destino
 
 
