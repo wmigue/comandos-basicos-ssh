@@ -21,8 +21,10 @@ Set-Service -Name sshd -StartupType 'Automatic'
 ssh vmwmigue@192.168.0.114
 
 # copiar todo el directorio y subcarpetas desde el servidor a nuestra maquina en el directorio que estamos parado en nuestra maquina cliente.
+~~~
 scp -r username@hostname:/path/from/remote .
 scp -r vmwmigue@192.168.0.114:C:\Users\vmWmigue\hola .
+~~~
 
 # copiar carpeta y contenido desde el cliente al servidor
 scp -r /path/from/local username@hostname:/path/to/remote
