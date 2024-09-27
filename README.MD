@@ -30,6 +30,7 @@ scp -r vmwmigue@192.168.0.114:C:\Users\vmWmigue\hola .
 
 # copiar carpeta y contenido desde el cliente al servidor
 ~~~
+(primero hay que darle permisos desde el servidor al directorio que recibe con: sudo chown usuario_remoto /directorio/directorio/)
 scp -r /path/from/local username@hostname:/path/to/remote
 ~~~
 
